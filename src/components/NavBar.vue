@@ -1,19 +1,44 @@
 <template>
-  <div>
-    <nav>
-      <router-link to="/">
-        <img src="" id="logo" alt="logo">
-      </router-link>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/pedidos">Pedidos</router-link>
-    </nav>
+  <div id="nav">
+    <router-link to="/" id="logo-url">
+      <img :src="logo" :alt="alt" id="logo" />
+    </router-link>
+    <router-link to="/">Home</router-link>
+    <router-link to="/pedidos">Pedidos</router-link>
   </div>
 </template>
 
 <script>
 export default {
   name: "Navbar",
+  props: ["logo", "alt"],
 };
 </script>
 
-<style></style>
+<style scoped>
+#nav {
+  background-color: var(--azul-escuro);
+  border-bottom: 2px solid var(--preto);
+  padding: 15px 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#nav #logo-url{
+margin: auto;
+margin-left: 0;
+}
+#logo{
+  width: 40px;
+  height: 40px;
+}
+#nav a{
+  color: var(--laranja);
+  text-decoration: none;
+  margin: 12px;
+  transition: .5s;
+}
+#nav a:hover{
+  color: var(--branco);
+}
+</style>
