@@ -1,65 +1,95 @@
 {
   "ingredientes": {
-    "paes": [
+    "recheio": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "tipo": "Doce de Leite"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "tipo": "Chocolate"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "tipo": "Leite ninho"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "tipo": "Nutella"
       }
     ],
-    "carnes": [
+    "cobertura": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "tipo": "Doce de Leite"
       },
       {
         "id": 2,
-        "tipo": "Alcatra"
+        "tipo": "Chocolate"
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "tipo": "Paçoquita"
       },
       {
         "id": 4,
-        "tipo": "Veggie burger"
+        "tipo": "Leite ninho"
+      },
+      {
+        "id": 5,
+        "tipo": "Nutella"
+      },
+      {
+        "id": 6,
+        "tipo": "Moranguete"
       }
     ],
-    "opcionais": [
+    "acompanhamento": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "tipo": "Granulado"
       },
       {
         "id": 2,
-        "tipo": "Cheddar"
+        "tipo": "ChocoBalls"
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "M&M's"
       },
       {
         "id": 4,
-        "tipo": "Tomate"
+        "tipo": "Amendoim"
+      },
+      {
+        "id": 5,
+        "tipo": "Ninho"
+      }
+    ],
+    "adicionais": [
+      {
+        "id": 1,
+        "tipo": "Doce de Leite"
+      },
+      {
+        "id": 2,
+        "tipo": "Chocolate"
+      },
+      {
+        "id": 3,
+        "tipo": "Paçoquita"
       },
       {
         "id": 4,
-        "tipo": "Cebola roxa"
+        "tipo": "Leite ninho"
       },
       {
-        "id": 4,
-        "tipo": "Pepino"
+        "id": 5,
+        "tipo": "Nutella"
+      },
+      {
+        "id": 6,
+        "tipo": "Moranguete"
       }
     ]
   },
@@ -74,32 +104,12 @@
     },
     {
       "id": 3,
+      "tipo": "Á caminho"
+    },
+    {
+      "id": 4,
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": "Matheus Battisti",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Finalizado",
-      "id": 1
-    },
-    {
-      "nome": "João Coelho",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    }
-  ]
+  "churros": []
 }
