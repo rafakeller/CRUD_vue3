@@ -1,6 +1,6 @@
 {
   "ingredientes": {
-    "recheio": [
+    "recheios": [
       {
         "id": 1,
         "tipo": "Doce de Leite"
@@ -18,7 +18,7 @@
         "tipo": "Nutella"
       }
     ],
-    "cobertura": [
+    "coberturas": [
       {
         "id": 1,
         "tipo": "Doce de Leite"
@@ -44,7 +44,7 @@
         "tipo": "Moranguete"
       }
     ],
-    "acompanhamento": [
+    "acompanhamentos": [
       {
         "id": 1,
         "tipo": "Granulado"
@@ -64,9 +64,13 @@
       {
         "id": 5,
         "tipo": "Ninho"
+      },
+      {
+        "id": 6,
+        "tipo": "Sem acompanhamento"
       }
     ],
-    "adicionais": [
+    "adicionaisdata": [
       {
         "id": 1,
         "tipo": "Doce de Leite"
