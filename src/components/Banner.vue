@@ -12,7 +12,8 @@ export default {
 
 <style scoped>
 #main-banner {
-  background-image: url("/public/img/burger.jpg");
+  background-image: url("/public/img/churros.jpg");
+  background-repeat: no-repeat;
   background-position: 0 -250px;
   background-size: cover;
   height: 600px;
