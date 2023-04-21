@@ -1,8 +1,8 @@
 <template>
-  <div id="burger-table">
+  <div id="churro-table">
     <Message :msg="msg" v-show="msg" />
     <div>
-      <div id="burger-table-heading">
+      <div id="churro-table-heading">
         <div class="order-id">N°</div>
         <div class="colunas">Cliente:</div>
         <div class="colunas">Recheio</div>
@@ -12,8 +12,8 @@
         <div class="colunas">Ações</div>
       </div>
     </div>
-    <div id="burger-table-rows">
-      <div id="burger-table-row" v-for="churro in churros" :key="churro.id">
+    <div id="churro-table-rows">
+      <div id="churro-table-row" v-for="churro in churros" :key="churro.id">
         <div class="order-number">{{ churro.id }}</div>
         <div>{{ churro.nome }}</div>
         <div>{{ churro.recheio }}</div>
@@ -27,17 +27,8 @@
           </ul>
         </div>
         <div id="acoes">
-          <select
-            name="status"
-            class="status"
-            @change="updateChurro($event, churro.id)"
-          >
-            <option
-              :value="s.tipo"
-              v-for="s in status"
-              :key="s.id"
-              :selected="churro.status == s.tipo"
-            >
+          <select  name="status"  class="status"  @change="updateChurro($event, churro.id)">
+            <option :value="s.tipo"  v-for="s in status"  :key="s.id"  :selected="churro.status == s.tipo">
               {{ s.tipo }}
             </option>
           </select>
@@ -113,36 +104,36 @@ export default {
 </script>
 
 <style scoped>
-#burger-table {
+#churro-table {
   max-width: 1250px;
   margin: 0 auto;
 }
 
-#burger-table-heading,
-#burger-table-rows,
-#burger-table-row {
+#churro-table-heading,
+#churro-table-rows,
+#churro-table-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#burger-table-heading {
+#churro-table-heading {
   font-weight: bold;
   padding: 12px;
   border-bottom: 3px solid var(--preto);
 }
-#burger-table-heading div,
-#burger-table-row div {
+#churro-table-heading div,
+#churro-table-row div {
   width: 15%;
 }
 
-#burger-table-row {
+#churro-table-row {
   width: 100%;
   padding: 12px;
   border-bottom: 1px solid var(--branco);
 }
-#burger-table-heading .order-id,
-#burger-table-row .order-number {
+#churro-table-heading .order-id,
+#churro-table-row .order-number {
   width: 5%;
 }
 

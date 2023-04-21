@@ -115,5 +115,15 @@
       "tipo": "Finalizado"
     }
   ],
-  "churros": []
+  "churros": [
+    {
+      "nome": "clein",
+      "recheio": "Chocolate",
+      "cobertura": "Doce de Leite",
+      "acompanhamento": "Granulado",
+      "adicionais": [],
+      "status": "Solicitado",
+      "id": 1
+    }
+  ]
 }

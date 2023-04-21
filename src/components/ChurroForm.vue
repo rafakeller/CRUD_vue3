@@ -2,27 +2,17 @@
   <div>
     <Message :msg="msg" v-show="msg" />
     <div>
-      <form @submit="createChurro($event)" id="burger-form">
+      <form @submit="createChurro($event)" id="churro-form">
         <div class="input-container">
           <label for="nome">Nome do Cliente</label>
-          <input
-            type="text"
-            id="nome"
-            name="name"
-            v-model="nome"
-            placeholder="Digite seu nome"
-          />
+          <input type="text" id="nome" name="name" v-model="nome" placeholder="Digite seu nome"/>
         </div>
 
         <div class="input-container">
           <label for="recheio">Escolha o Recheio:</label>
           <select name="recheio" id="recheio" v-model="recheio">
             <option value="">Selecione seu recheio</option>
-            <option
-              v-for="recheio in recheios"
-              :key="recheio.id"
-              :value="recheio.tipo"
-            >
+            <option v-for="recheio in recheios" :key="recheio.id" :value="recheio.tipo">
               {{ recheio.tipo }}
             </option>
           </select>
@@ -32,11 +22,7 @@
           <label for="cobertura">Escolha a Cobertura:</label>
           <select name="cobertura" id="cobertura" v-model="cobertura">
             <option value="">Selecione sua cobertura</option>
-            <option
-              v-for="cobertura in coberturas"
-              :key="cobertura.id"
-              :value="cobertura.tipo"
-            >
+            <option v-for="cobertura in coberturas"  :key="cobertura.id"  :value="cobertura.tipo">
               {{ cobertura.tipo }}
             </option>
           </select>
@@ -44,38 +30,18 @@
 
         <div class="input-container">
           <label for="acompanhamento">Escolha o acompanhamento seco</label>
-          <select
-            name="acompanhamento"
-            id="acompanhamento"
-            v-model="acompanhamento"
-          >
+          <select  name="acompanhamento"  id="acompanhamento"  v-model="acompanhamento">
             <option value="">Selecione seu acompanhamento:</option>
-            <option
-              v-for="acompanhamento in acompanhamentos"
-              :key="acompanhamento.id"
-              :value="acompanhamento.tipo"
-            >
+            <option v-for="acompanhamento in acompanhamentos"  :key="acompanhamento.id"  :value="acompanhamento.tipo">
               {{ acompanhamento.tipo }}
             </option>
           </select>
         </div>
 
         <div id="adicionais-container" class="input-container">
-          <label id="adicionais-title" for="adicionais"
-            >Escolha os adicionais:</label
-          >
-          <div
-            v-for="adicionais in adicionaisdata"
-            :key="adicionais.id"
-            :value="adicionais.tipo"
-            class="checkbox-container"
-          >
-            <input
-              type="checkbox"
-              name="adicionais"
-              v-model="adicionais.tipo"
-              value="adicionais.tipo"
-            />
+          <label id="adicionais-title" for="adicionais">Escolha os adicionais:</label >
+          <div  class="checkbox-container" v-for="adicionais in adicionaisdata" :key="adicionais.id"   >
+            <input  type="checkbox"  name="adicionais" v-model="adicionais.tipo" :value="adicionais.tipo">
             <span>{{ adicionais.tipo }} </span>
           </div>
         </div>
@@ -91,18 +57,18 @@
 <script>
 import Message from "./Message.vue";
 export default {
-  name: "BurgerForm",
+  name: "ChurroForm",
   data() {
     return {
       recheios: null,
       coberturas: null,
       acompanhamentos: null,
-      adicionaisdata: [],
+      adicionaisdata: null,
       nome: null,
       recheio: null,
       cobertura: null,
       acompanhamento: null,
-      adicionais: new Array(),
+      adicionais: [],
       msg: null,
     };
   },
@@ -110,6 +76,7 @@ export default {
 
   methods: {
     async getIngredientes() {
+
       const req = await fetch("http://localhost:3000/ingredientes");
       const data = await req.json();
       this.recheios = data.recheios;
@@ -149,7 +116,7 @@ export default {
       this.recheio = "";
       this.cobertura = "";
       this.acompanhamento = "";
-      this.adicionais = "";
+      this.adicionais =[];
     },
   },
   mounted() {
@@ -162,7 +129,7 @@ export default {
 </script>
 
 <style scoped>
-#burger-form {
+#churro-form {
   max-width: 400px;
   margin: 0 auto;
 }
